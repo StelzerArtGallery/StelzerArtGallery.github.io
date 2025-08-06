@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #fff;
+      background: linear-gradient(135deg, #232526 0%, #414345 100%);
+      min-height: 100vh;
+    }
+    nav {
+      background: #18191a;
+      color: #fff;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    a { color: #fff; text-decoration: none; }
+    a:hover { color: #ffd700; }
+    main {
+      padding: 2rem 3vw;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <!-- Add more navigation links here if needed -->
+  </nav>
+  <main>
+    {{ content }}
+  </main>
+  <script src="/assets/js/lightbox.js"></script>
+</body>
+</html>

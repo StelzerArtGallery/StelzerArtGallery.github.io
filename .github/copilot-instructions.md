@@ -1,0 +1,3 @@
+<!-- Use this file to provide workspace-specific custom instructions to Copilot. For more details, visit https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilotinstructionsmd-file -->
+
+This is a Jekyll static site for an art gallery. Please generate code and content that is modern, beautiful, and user-friendly, with a dark gray gradient background and white text (except navigation). Automate gallery page creation for each category (folder) and display images in a responsive grid. The landing page should link to each category with a thumbnail and label, and fade between images at random intervals (20-40s) with smooth transitions. The site title should be 'Home'.

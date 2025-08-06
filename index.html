@@ -1,0 +1,97 @@
+---
+layout: default
+title: Home
+---
+<div class="fade-gallery" id="fade-gallery"></div>
+
+<h1 style="text-align:center; font-size:2.5rem; margin-bottom:2rem;">Florence Stelzer Art Gallery</h1>
+<p style="text-align:center; max-width:600px; margin:0 auto 2rem auto; font-size:1.2rem; color:#ccc;">Explore the gallery by category.</p>
+
+<div class="gallery-grid" id="category-grid">
+  <!-- Category thumbnails will be injected here -->
+</div>
+
+<script>
+// Helper: Pick a random image from a category
+function getRandomImage(images) {
+  return images[Math.floor(Math.random() * images.length)];
+}
+
+// Render category grid using window.categories, with fading thumbnails
+function renderCategoryGrid() {
+  const grid = document.getElementById('category-grid');
+  grid.innerHTML = '';
+  if (!window.categories) return;
+  window.categories.forEach((cat, idx) => {
+    // Create container for fading image
+    const item = document.createElement('a');
+    item.className = 'gallery-item';
+    item.href = `/${cat.folder}/`;
+    // Create all images, only one visible at a time
+    const imgDiv = document.createElement('div');
+    imgDiv.style.position = 'relative';
+    imgDiv.style.width = '100%';
+    imgDiv.style.height = '220px';
+    imgDiv.style.overflow = 'hidden';
+    cat.images.forEach((img, i) => {
+      const el = document.createElement('img');
+      el.src = `/${cat.folder}/${img}`;
+      el.alt = `${cat.name} thumbnail`;
+      el.style.position = 'absolute';
+      el.style.left = 0;
+      el.style.top = 0;
+      el.style.width = '100%';
+      el.style.height = '100%';
+      el.style.objectFit = 'cover';
+      el.style.opacity = i === 0 ? 1 : 0;
+      el.style.transition = 'opacity 1.2s cubic-bezier(.4,0,.2,1)';
+      imgDiv.appendChild(el);
+    });
+    // Fade logic for this thumbnail
+    setTimeout(function fadeThumb(idx=0) {
+      const imgs = imgDiv.querySelectorAll('img');
+      imgs.forEach((img, i) => img.style.opacity = (i === idx ? 1 : 0));
+      let nextIdx = (idx + 1) % imgs.length;
+      let nextDelay = 5000 + Math.random() * 5000; // 5-10s
+      setTimeout(() => fadeThumb(nextIdx), nextDelay);
+    }, 5000 + Math.random() * 5000);
+    // Label
+    const label = document.createElement('div');
+    label.className = 'gallery-label';
+    label.textContent = cat.name;
+    item.appendChild(imgDiv);
+    item.appendChild(label);
+    grid.appendChild(item);
+  });
+}
+
+// Fade gallery logic using window.categories, faster and random
+function startFadeGallery() {
+  if (!window.categories || !window.categories.length) return;
+  const fadeDiv = document.getElementById('fade-gallery');
+  let allImages = [];
+  window.categories.forEach(cat => allImages = allImages.concat(cat.images.map(img => `/${cat.folder}/${img}`)));
+  if (!allImages.length) return;
+  // Always start with DSCN0626.JPG if present
+  let firstImgName = 'DSCN0626.JPG';
+  let firstIdx = allImages.findIndex(src => src.endsWith('/' + firstImgName));
+  if (firstIdx === -1) firstIdx = 0;
+  fadeDiv.innerHTML = allImages.map((src, i) => `<img src="${src}" class="${i===firstIdx?'active':''}" style="position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;opacity:${i===firstIdx?1:0};transition:opacity 1.2s cubic-bezier(.4,0,.2,1);border-radius:18px;">`).join('');
+  let idx = firstIdx;
+  function nextImage() {
+    const imgs = fadeDiv.querySelectorAll('img');
+    imgs.forEach((img, i) => img.style.opacity = (i === idx ? 1 : 0));
+    let nextIdx = Math.floor(Math.random() * imgs.length);
+    if (nextIdx === idx && imgs.length > 1) nextIdx = (idx + 1) % imgs.length;
+    let nextDelay = 5000 + Math.random() * 5000; // 5-10s
+    setTimeout(() => {
+      idx = nextIdx;
+      nextImage();
+    }, nextDelay);
+  }
+  nextImage();
+}
+
+// These will be called by gallery-init.js after categories.json loads
+</script>
+<script src="/assets/js/gallery-init.js"></script>

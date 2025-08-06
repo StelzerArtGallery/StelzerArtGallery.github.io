@@ -1,0 +1,248 @@
+[
+  {
+    "name": "Abandoned Barns",
+    "folder": "assets/images/AbandonedBarns",
+    "images": [
+      "DSCN0545.JPG",
+      "DSCN0546.JPG",
+      "DSCN0547.JPG",
+      "DSCN0551.JPG",
+      "DSCN0552.JPG",
+      "DSCN0553.JPG",
+      "DSCN0605.JPG",
+      "DSCN0631.JPG",
+      "DSCN0632.JPG",
+      "DSCN0633.JPG",
+      "DSCN0634.JPG",
+      "DSCN0635.JPG",
+      "DSCN0636.JPG",
+      "DSCN0637.JPG",
+      "DSCN0638.JPG",
+      "DSCN0652.JPG",
+      "DSCN0654.JPG",
+      "DSCN0669.JPG",
+      "DSCN0682.JPG",
+      "DSCN0683.JPG",
+      "DSCN0684.JPG",
+      "DSCN0685.JPG",
+      "DSCN0709.JPG",
+      "DSCN0710.JPG",
+      "DSCN0711.JPG",
+      "DSCN0713.JPG"
+    ]
+  },
+  {
+    "name": "Autumn",
+    "folder": "assets/images/Autumn",
+    "images": [
+      "DSCN0538.JPG",
+      "DSCN0543.JPG",
+      "DSCN0671.JPG",
+      "DSCN0674.JPG",
+      "DSCN0694.JPG"
+    ]
+  },
+  {
+    "name": "Birds",
+    "folder": "assets/images/Birds",
+    "images": [
+      "DSCN0557.JPG",
+      "DSCN0580.JPG",
+      "DSCN0595.JPG",
+      "DSCN0596.JPG",
+      "DSCN0600.JPG",
+      "DSCN0611.JPG",
+      "DSCN0613.JPG",
+      "DSCN0614.JPG",
+      "DSCN0663.JPG",
+      "DSCN0680.JPG"
+    ]
+  },
+  {
+    "name": "Bluebonnets",
+    "folder": "assets/images/Bluebonnets",
+    "images": [
+      "DSCN0513.JPG",
+      "DSCN0515.JPG",
+      "DSCN0516.JPG",
+      "DSCN0517.JPG",
+      "DSCN0524.JPG",
+      "DSCN0525.JPG",
+      "DSCN0625.JPG",
+      "DSCN0626.JPG"
+    ]
+  },
+  {
+    "name": "Crashing Waves",
+    "folder": "assets/images/CrashingWaves",
+    "images": [
+      "DSCN0565.JPG",
+      "DSCN0567.JPG",
+      "DSCN0568.JPG",
+      "DSCN0672.JPG"
+    ]
+  },
+  {
+    "name": "Floral",
+    "folder": "assets/images/Floral",
+    "images": [
+      "DSCN0527.JPG",
+      "DSCN0528.JPG",
+      "DSCN0530.JPG",
+      "DSCN0531.JPG",
+      "DSCN0593.JPG",
+      "DSCN0594.JPG",
+      "DSCN0601.JPG",
+      "DSCN0602.JPG",
+      "DSCN0623.JPG",
+      "DSCN0657.JPG",
+      "DSCN0666.JPG",
+      "DSCN0706.JPG",
+      "DSCN0728.JPG",
+      "DSCN0729.JPG"
+    ]
+  },
+  {
+    "name": "Just Trees",
+    "folder": "assets/images/JustTrees",
+    "images": [
+      "DSCN0562.JPG",
+      "DSCN0563.JPG",
+      "DSCN0603.JPG",
+      "DSCN0622.JPG",
+      "DSCN0656.JPG",
+      "DSCN0662.JPG",
+      "DSCN0681.JPG",
+      "DSCN0687.JPG"
+    ]
+  },
+  {
+    "name": "Lighthouses",
+    "folder": "assets/images/Lighthouses",
+    "images": [
+      "DSCN0511.JPG",
+      "DSCN0583.JPG",
+      "DSCN0628.JPG",
+      "DSCN0655.JPG",
+      "DSCN0675.JPG"
+    ]
+  },
+  {
+    "name": "Old Oaks",
+    "folder": "assets/images/OldOaks",
+    "images": [
+      "DSCN0514.JPG",
+      "DSCN0532.JPG",
+      "DSCN0537.JPG",
+      "DSCN0572.JPG",
+      "DSCN0606.JPG",
+      "DSCN0619.JPG",
+      "DSCN0620.JPG"
+    ]
+  },
+  {
+    "name": "Sand Dunes",
+    "folder": "assets/images/SandDunes",
+    "images": [
+      "DSCN0526.JPG",
+      "DSCN0571.JPG",
+      "DSCN0574.JPG",
+      "DSCN0575.JPG",
+      "DSCN0586.JPG",
+      "DSCN0616.JPG",
+      "DSCN0617.JPG",
+      "DSCN0618.JPG",
+      "DSCN0653.JPG",
+      "DSCN0703.JPG",
+      "DSCN0705.JPG",
+      "DSCN0707.JPG",
+      "DSCN0708.JPG"
+    ]
+  },
+  {
+    "name": "Seashells",
+    "folder": "assets/images/Seashells",
+    "images": [
+      "DSCN0576.JPG",
+      "DSCN0577.JPG",
+      "DSCN0582.JPG",
+      "DSCN0587.JPG",
+      "DSCN0588.JPG",
+      "DSCN0589.JPG",
+      "DSCN0591.JPG",
+      "DSCN0610.JPG",
+      "DSCN0650.JPG",
+      "DSCN0719.JPG",
+      "DSCN0720.JPG",
+      "DSCN0721.JPG",
+      "DSCN0722.JPG",
+      "DSCN0723.JPG",
+      "DSCN0724.JPG",
+      "DSCN0726.JPG",
+      "DSCN0727.JPG"
+    ]
+  },
+  {
+    "name": "Still Life",
+    "folder": "assets/images/StillLife",
+    "images": [
+      "DSCN0645.JPG",
+      "DSCN0658.JPG",
+      "DSCN0677.JPG",
+      "DSCN0686.JPG"
+    ]
+  },
+  {
+    "name": "Stumps",
+    "folder": "assets/images/Stumps",
+    "images": [
+      "DSCN0561.JPG",
+      "DSCN0627.JPG",
+      "DSCN0640.JPG"
+    ]
+  },
+  {
+    "name": "Water & Trees",
+    "folder": "assets/images/Water&Trees",
+    "images": [
+      "DSCN0558.JPG",
+      "DSCN0559.JPG",
+      "DSCN0573.JPG",
+      "DSCN0621.JPG",
+      "DSCN0641.JPG",
+      "DSCN0651.JPG",
+      "DSCN0659.JPG",
+      "DSCN0661.JPG",
+      "DSCN0668.JPG",
+      "DSCN0679.JPG",
+      "DSCN0700.JPG"
+    ]
+  },
+  {
+    "name": "Waterfalls",
+    "folder": "assets/images/Waterfalls",
+    "images": [
+      "DSCN0529.JPG",
+      "DSCN0604.JPG",
+      "DSCN0716.JPG"
+    ]
+  },
+  {
+    "name": "Winter",
+    "folder": "assets/images/Winter",
+    "images": [
+      "DSCN0585.JPG",
+      "DSCN0597.JPG",
+      "DSCN0598.JPG",
+      "DSCN0624.JPG",
+      "DSCN0629.JPG",
+      "DSCN0673.JPG",
+      "DSCN0676.JPG",
+      "DSCN0678.JPG",
+      "DSCN0695.JPG",
+      "DSCN0697.JPG",
+      "DSCN0698.JPG",
+      "DSCN0699.JPG"
+    ]
+  }
+]
