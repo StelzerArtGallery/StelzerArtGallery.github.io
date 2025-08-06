@@ -26,7 +26,7 @@ function renderCategoryGrid() {
     // Create container for fading image
     const item = document.createElement('a');
     item.className = 'gallery-item';
-    item.href = `/${cat.folder}/`;
+    item.href = `/${cat.folder.split('/').pop()}.html`;
     // Create all images, only one visible at a time
     const imgDiv = document.createElement('div');
     imgDiv.style.position = 'relative';
