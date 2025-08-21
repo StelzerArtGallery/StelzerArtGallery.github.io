@@ -9,7 +9,7 @@ CATEGORIES = []
 
 # Mapping of folder names to display names
 DISPLAY_NAMES = {
-    'AbandonedBarns': 'Abandoned Barns',
+    'Barns': 'Barns',
     'Autumn': 'Autumn',
     'Birds': 'Birds',
     'Bluebonnets': 'Bluebonnets',
@@ -73,7 +73,7 @@ title: {cat_name}
 for idx, cat in enumerate(CATEGORIES):
     img_tags = '\n  '.join([
         f'<a class="gallery-item" href="/{cat['folder']}/{img}" target="_blank">'
-        f'<img src="/{cat['folder']}/{img}" alt="{cat['name']} artwork">'
+        f'<img src="/{cat['folder']}/{img}" alt="{cat['name']} artwork" loading="lazy">'
         '</a>' for img in cat['images']
     ])
     prev_idx = (idx - 1) % len(CATEGORIES)
