@@ -1,7 +1,18 @@
 [
   {
-    "name": "Abandoned Barns",
-    "folder": "assets/images/AbandonedBarns",
+    "name": "Autumn",
+    "folder": "assets/images/Autumn",
+    "images": [
+      "DSCN0538.JPG",
+      "DSCN0543.JPG",
+      "DSCN0671.JPG",
+      "DSCN0674.JPG",
+      "DSCN0694.JPG"
+    ]
+  },
+  {
+    "name": "Barns",
+    "folder": "assets/images/Barns",
     "images": [
       "DSCN0545.JPG",
       "DSCN0546.JPG",
@@ -29,17 +40,6 @@
       "DSCN0710.JPG",
       "DSCN0711.JPG",
       "DSCN0713.JPG"
-    ]
-  },
-  {
-    "name": "Autumn",
-    "folder": "assets/images/Autumn",
-    "images": [
-      "DSCN0538.JPG",
-      "DSCN0543.JPG",
-      "DSCN0671.JPG",
-      "DSCN0674.JPG",
-      "DSCN0694.JPG"
     ]
   },
   {
