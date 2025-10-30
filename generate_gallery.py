@@ -9,8 +9,8 @@ CATEGORIES = []
 
 # Mapping of folder names to display names
 DISPLAY_NAMES = {
-    'Barns': 'Barns',
     'Autumn': 'Autumn',
+    'Barns': 'Barns',
     'Birds': 'Birds',
     'Bluebonnets': 'Bluebonnets',
     'CrashingWaves': 'Crashing Waves',
