@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ site.lang | default: " en-US" }}">
+
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="/assets/css/style.css">
@@ -13,16 +15,25 @@
       background: linear-gradient(135deg, #232526 0%, #414345 100%);
       min-height: 100vh;
     }
+
     nav {
       background: #18191a;
       color: #fff;
       padding: 1rem 2rem;
       font-size: 1.2rem;
       letter-spacing: 1px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
-    a { color: #fff; text-decoration: none; }
-    a:hover { color: #ffd700; }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #ffd700;
+    }
+
     main {
       padding: 2rem 3vw;
       max-width: 1200px;
@@ -31,14 +42,23 @@
     }
   </style>
 </head>
+
 <body>
-  <nav>
-    <a href="/">Home</a>
-    <!-- Add more navigation links here if needed -->
-  </nav>
+  <header>
+    <nav><a href="/">Home</a>
+      <p><a href="https://github.com/StelzerArtGallery/StelzerArtGallery.github.io"><img
+            src="https://img.shields.io/badge/GitHub-blue?logo=GitHub"></a></p>
+      <!-- Add more navigation links here if needed -->
+    </nav>
+  </header>
   <main>
     {{ content }}
   </main>
+  <footer>
+    <p><small>Hosted on <a href="https://github.com/StelzerArtGallery/StelzerArtGallery.github.io">GitHub
+          Pages</a></small></p>
+  </footer>
   <script src="/assets/js/lightbox.js"></script>
 </body>
+
 </html>
