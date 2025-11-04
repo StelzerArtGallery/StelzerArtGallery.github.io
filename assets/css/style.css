@@ -72,6 +72,18 @@ body {
   color: #fff;
   font-family: 'Segoe UI', Arial, sans-serif;
 }
+header nav {
+  display: table;
+  width: 100%;
+}
+header nav p {
+  display: table-cell;
+  text-align: right;
+  padding-right:45px;
+}
+footer {
+  text-align: center;
+}
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
