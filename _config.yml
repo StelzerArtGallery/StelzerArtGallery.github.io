@@ -28,6 +28,7 @@ url: "https://stelzerartgallery.github.io" # the base hostname & protocol for yo
 github:
   repository: StelzerArtGallery/StelzerArtGallery.github.io
   username: StelzerArtGallery
+show_downloads: true
 
 # Build settings
 theme: minima
