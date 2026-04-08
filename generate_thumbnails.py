@@ -4,7 +4,7 @@ from pathlib import Path
 from PIL import Image
 
 # Configuration
-THUMBNAIL_SIZE = (285, 230)  # width, height
+THUMBNAIL_SIZE = (435, 350)  # width, height
 THUMBNAIL_SUFFIX = '-thumb'
 
 def generate_thumbnails():

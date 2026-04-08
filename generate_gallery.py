@@ -46,7 +46,7 @@ with open('assets/categories.json', 'w', encoding='utf-8') as f:
     json.dump(CATEGORIES, f, indent=2)
 
 # Generate thumbnails
-THUMBNAIL_SIZE = (285, 230)  # width, height
+THUMBNAIL_SIZE = (435, 350)  # width, height
 THUMBNAIL_SUFFIX = '-thumb'
 
 for category in CATEGORIES:
