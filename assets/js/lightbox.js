@@ -26,11 +26,13 @@
     if (idx < 0) idx = images.length - 1;
     if (idx >= images.length) idx = 0;
     current = idx;
-    img.src = images[current].src;
+    // Get full-resolution image URL from the link's href, not the thumbnail src
+    const link = images[current].parentElement;
+    const fullImageUrl = link.getAttribute('href');
+    img.src = fullImageUrl;
     img.alt = images[current].alt;
     // Set tooltip (title) to file name
-    const src = images[current].src || images[current].getAttribute('src');
-    let fileName = src.split('/').pop();
+    let fileName = fullImageUrl.split('/').pop();
     img.title = fileName;
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
