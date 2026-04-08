@@ -1,6 +1,7 @@
 import os
 import json
 from pathlib import Path
+from PIL import Image
 
 
 # Configuration
@@ -44,6 +45,50 @@ if GALLERY_ROOT.exists():
 with open('assets/categories.json', 'w', encoding='utf-8') as f:
     json.dump(CATEGORIES, f, indent=2)
 
+# Generate thumbnails
+THUMBNAIL_SIZE = (285, 230)  # width, height
+THUMBNAIL_SUFFIX = '-thumb'
+
+for category in CATEGORIES:
+    folder_path = Path(category['folder'])
+    thumbnails_folder = folder_path / 'thumbnails'
+    thumbnails_folder.mkdir(exist_ok=True)
+
+    thumbnails = []
+    for img_name in category['images']:
+        img_path = folder_path / img_name
+        if not img_path.exists():
+            continue
+
+        # Generate thumbnail filename
+        name_parts = img_name.rsplit('.', 1)
+        thumb_name = f"{name_parts[0]}{THUMBNAIL_SUFFIX}.{name_parts[1]}"
+        thumb_path = thumbnails_folder / thumb_name
+
+        # Skip if thumbnail already exists
+        if thumb_path.exists():
+            print(f"Thumbnail already exists: {thumb_path}")
+            thumbnails.append(thumb_name)
+            continue
+
+        try:
+            # Open image and create thumbnail
+            with Image.open(img_path) as img:
+                img.thumbnail(THUMBNAIL_SIZE)
+                # Save with same format
+                img.save(thumb_path, img.format)
+                print(f"Generated thumbnail: {thumb_path}")
+                thumbnails.append(thumb_name)
+        except Exception as e:
+            print(f"Error processing {img_path}: {e}")
+
+    # Update category with thumbnails
+    category['thumbnails'] = thumbnails
+
+# Re-write categories.json with thumbnails
+with open('assets/categories.json', 'w', encoding='utf-8') as f:
+    json.dump(CATEGORIES, f, indent=2)
+
 # Generate a gallery page for each category
 
 # Prepare navigation for categories (alphabetical order)
@@ -73,8 +118,8 @@ title: {cat_name}
 for idx, cat in enumerate(CATEGORIES):
     img_tags = '\n  '.join([
         f'<a class="gallery-item" href="/{cat['folder']}/{img}" target="_blank">'
-        f'<img src="/{cat['folder']}/{img}" alt="{cat['name']} artwork" loading="lazy">'
-        '</a>' for img in cat['images']
+        f'<img src="/{cat['folder']}/thumbnails/{cat['thumbnails'][i]}" alt="{cat['name']} artwork" loading="lazy">'
+        '</a>' for i, img in enumerate(cat['images'])
     ])
     prev_idx = (idx - 1) % len(CATEGORIES)
     next_idx = (idx + 1) % len(CATEGORIES)

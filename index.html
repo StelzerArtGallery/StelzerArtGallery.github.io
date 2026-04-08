@@ -33,9 +33,9 @@ function renderCategoryGrid() {
     imgDiv.style.width = '100%';
     imgDiv.style.height = '220px';
     imgDiv.style.overflow = 'hidden';
-    cat.images.forEach((img, i) => {
+    cat.thumbnails.forEach((thumb, i) => {
       const el = document.createElement('img');
-      el.src = `/${cat.folder}/${img}`;
+      el.src = `/${cat.folder}/thumbnails/${thumb}`;
       el.alt = `${cat.name} thumbnail`;
       el.style.position = 'absolute';
       el.style.left = 0;
